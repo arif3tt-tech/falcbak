@@ -21,33 +21,15 @@ html,body{
 
 body{
   font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;
-
   display:flex;
   align-items:center;
   justify-content:center;
 
   background:
-    radial-gradient(
-      circle at 10% 12%,
-      rgba(0,229,255,.55),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 90% 18%,
-      rgba(255,91,210,.42),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 82% 90%,
-      rgba(115,84,255,.52),
-      transparent 34%
-    ),
-    linear-gradient(
-      135deg,
-      #dffcff 0%,
-      #ffffff 45%,
-      #eee9ff 100%
-    );
+    radial-gradient(circle at 10% 12%,rgba(0,229,255,.55),transparent 30%),
+    radial-gradient(circle at 90% 18%,rgba(255,91,210,.42),transparent 30%),
+    radial-gradient(circle at 82% 90%,rgba(115,84,255,.52),transparent 34%),
+    linear-gradient(135deg,#dffcff 0%,#ffffff 45%,#eee9ff 100%);
 }
 
 /* Background liquid */
@@ -56,36 +38,22 @@ body{
   inset:-20%;
 
   background:
-    radial-gradient(
-      circle at 25% 35%,
-      rgba(37,211,255,.20),
-      transparent 22%
-    ),
-    radial-gradient(
-      circle at 70% 65%,
-      rgba(139,92,246,.18),
-      transparent 25%
-    );
+    radial-gradient(circle at 25% 35%,rgba(37,211,255,.20),transparent 22%),
+    radial-gradient(circle at 70% 65%,rgba(139,92,246,.18),transparent 25%);
 
   filter:blur(35px);
-
-  animation:
-    float 8s ease-in-out infinite alternate;
+  animation:float 8s ease-in-out infinite alternate;
 }
 
 /* Main glass card */
 .card{
   position:relative;
   width:min(88%,520px);
-
   padding:55px 28px;
-
   text-align:center;
-
   border-radius:36px;
 
   background:rgba(255,255,255,.55);
-
   border:1px solid rgba(255,255,255,.82);
 
   box-shadow:
@@ -96,112 +64,81 @@ body{
   -webkit-backdrop-filter:blur(24px);
 }
 
-/* SHORTNER Water Drop Logo */
+/* Water Drop Logo */
 .logo{
   width:82px;
   height:82px;
-
   margin:0 auto 25px;
-
   display:block;
 
-  filter:
-    drop-shadow(0 12px 22px rgba(55,110,245,.28));
-
-  animation:
-    logoFloat 4s ease-in-out infinite;
+  filter:drop-shadow(0 12px 22px rgba(55,110,245,.28));
+  animation:logoFloat 4s ease-in-out infinite;
 }
 
-/* Badge */
+/* JOIN TELEGRAM Badge */
 .badge{
   display:inline-block;
-
   padding:9px 18px;
-
   border-radius:999px;
 
-  background:
-    linear-gradient(
-      90deg,
-      #18cfe8,
-      #6b6ff5,
-      #a15cf4
-    );
+  background:linear-gradient(90deg,#18cfe8,#6b6ff5,#a15cf4);
 
   color:#fff;
-
   font-size:11px;
   font-weight:800;
+  letter-spacing:2px;
 
-  letter-spacing:3px;
-
-  box-shadow:
-    0 8px 25px rgba(91,104,238,.25);
-
+  box-shadow:0 8px 25px rgba(91,104,238,.25);
   margin-bottom:28px;
+
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+
+.badge a{
+  display:inline-block;
+  color:#fff;
+  text-decoration:none;
+}
+
+.badge:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(91,104,238,.4);
 }
 
 /* Main title */
 h1{
   font-size:clamp(34px,9vw,60px);
-
   line-height:1.1;
-
   font-weight:900;
-
   letter-spacing:1px;
 
-  background:
-    linear-gradient(
-      90deg,
-      #00aeca,
-      #397cf5,
-      #8d4ff0,
-      #e04bc1
-    );
+  background:linear-gradient(90deg,#00aeca,#397cf5,#8d4ff0,#e04bc1);
 
   -webkit-background-clip:text;
   background-clip:text;
-
   color:transparent;
 }
 
 /* Credit */
 .credit{
   margin-top:20px;
-
   color:#61718a;
-
   font-size:15px;
-
   font-weight:700;
-
   letter-spacing:1px;
 }
 
 /* Arafat Multi-Color Glow */
 .credit a{
   text-decoration:none;
-
   margin-left:4px;
-
   font-weight:900;
 
-  background:
-    linear-gradient(
-      90deg,
-      #00cfff,
-      #397cff,
-      #8d4ff0,
-      #f04fc4,
-      #00d9c6
-    );
-
+  background:linear-gradient(90deg,#00cfff,#397cff,#8d4ff0,#f04fc4,#00d9c6);
   background-size:300% 100%;
 
   -webkit-background-clip:text;
   background-clip:text;
-
   color:transparent;
 
   text-shadow:
@@ -209,9 +146,8 @@ h1{
     0 0 12px rgba(100,80,255,.45),
     0 0 22px rgba(235,70,200,.35);
 
-  animation:
-    multiGlow 3s ease-in-out infinite,
-    gradientMove 4s linear infinite;
+  animation:multiGlow 3s ease-in-out infinite,
+            gradientMove 4s linear infinite;
 }
 
 /* Hover glow */
@@ -225,13 +161,8 @@ h1{
 
 /* Logo animation */
 @keyframes logoFloat{
-  0%,100%{
-    transform:translateY(0);
-  }
-
-  50%{
-    transform:translateY(-7px);
-  }
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-7px);}
 }
 
 /* Multi-color glow animation */
@@ -252,25 +183,15 @@ h1{
 
 /* Moving gradient */
 @keyframes gradientMove{
-  0%{
-    background-position:0% 50%;
-  }
-
-  50%{
-    background-position:100% 50%;
-  }
-
-  100%{
-    background-position:0% 50%;
-  }
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
 /* Background animation */
 @keyframes float{
   to{
-    transform:
-      translate3d(2%,-2%,0)
-      scale(1.04);
+    transform:translate3d(2%,-2%,0) scale(1.04);
   }
 }
 </style>
@@ -282,12 +203,12 @@ h1{
 
 <main class="card">
 
-  <!-- SHORTNER Logo -->
+  <!-- Water Drop Logo -->
   <svg
     class="logo"
     viewBox="0 0 100 120"
     xmlns="http://www.w3.org/2000/svg"
-    aria-label="SHORTNER Logo"
+    aria-label="Water Drop Logo"
   >
     <defs>
       <linearGradient
@@ -323,8 +244,13 @@ h1{
     />
   </svg>
 
+  <!-- JOIN TELEGRAM Button -->
   <div class="badge">
-    FALLBACK
+    <a
+      href="https://t.me/+Qjrl3DUTGVU2MWZl"
+      target="_blank"
+      rel="noopener noreferrer"
+    >JOIN TELEGRAM</a>
   </div>
 
   <h1>
@@ -337,9 +263,7 @@ h1{
       href="https://t.me/ftgaming2"
       target="_blank"
       rel="noopener noreferrer"
-    >
-      (Arafat)
-    </a>
+    >(Arafat)</a>
   </div>
 
 </main>
